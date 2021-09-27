@@ -3,7 +3,7 @@
         <div class="w-full md:w-1/2 py-24 mx-auto">
             <div class="mb-4">
                 <h2 class="text-2xl font-medium text-gray-900 title-font">
-                    Create a new listing ($99)
+                    Create a new listing (RM10)
                 </h2>
             </div>
             @if($errors->any())
@@ -136,7 +136,7 @@
                             name="is_highlighted"
                             value="Yes"
                             class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-offset-0 focus:ring-indigo-200 focus:ring-opacity-50">
-                        <span class="ml-2">Highlight this post (extra $19)</span>
+                        <span class="ml-2">Highlight this post (extra RM5)</span>
                     </label>
                 </div>
                 <div class="mb-6 mx-2">

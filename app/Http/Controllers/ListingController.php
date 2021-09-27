@@ -77,7 +77,7 @@ class ListingController extends Controller
             'location' => 'required',
             'apply_link' => 'required|url',
             'content' => 'required',
-            'payment_method_id' => 'required'
+            // 'payment_method_id' => 'required'
         ];
 
         if (!Auth::check()) {
@@ -100,16 +100,16 @@ class ListingController extends Controller
                 'password' => Hash::make($request->password)
             ]);
 
-            $user->createAsStripeCustomer();
+            // $user->createAsStripeCustomer();
 
             Auth::login($user);
         }
 
         // process the payment and create the listing
         try {
-            $amount = 9900; // $99.00 USD in cents
+            $amount = 1000; // MYR10.00 USD in cents, currency set in .env 
             if ($request->filled('is_highlighted')) {
-                $amount += 1900;
+                $amount += 500; // plus RM5 for highlight
             }
 
             $user->charge($amount, $request->payment_method_id);
@@ -125,7 +125,7 @@ class ListingController extends Controller
                     'location' => $request->location,
                     'apply_link' => $request->apply_link,
                     'content' => $md->text($request->input('content')),
-                    'is_highlighted' => $request->filled('is_highlighted'),
+                    // 'is_highlighted' => $request->filled('is_highlighted'),
                     'is_active' => true
                 ]);
 
