@@ -2,7 +2,7 @@
     <div class="container mx-auto flex flex-col px-5 pt-16 pb-8 justify-center items-center">
         <div class="w-full md:w-2/3 flex flex-col items-center text-center">
             <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">JOMLAUNCH Job Board</h1>
-            <p class="mb-8 leading-relaxed">JOMLAUNCH is happening from 4th October until 8th October 2021. Check out some available jobs posted by
+            <p class="mb-8 leading-relaxed"><a href="https://launch.jomweb.my" target="_blank"><strong>JOMLAUNCH is happening from 4th October until 8th October 2021.</strong></a> Check out some available jobs posted by
                 sponsors, friends and our community. We invite
                 companies to add your vacancies to the list for free.
             </p>
