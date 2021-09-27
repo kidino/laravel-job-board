@@ -77,7 +77,7 @@ class ListingController extends Controller
             'location' => 'required',
             'apply_link' => 'required|url',
             'content' => 'required',
-            // 'payment_method_id' => 'required'
+            'payment_method_id' => 'required'
         ];
 
         if (!Auth::check()) {
@@ -100,7 +100,7 @@ class ListingController extends Controller
                 'password' => Hash::make($request->password)
             ]);
 
-            // $user->createAsStripeCustomer();
+            $user->createAsStripeCustomer();
 
             Auth::login($user);
         }
@@ -125,7 +125,7 @@ class ListingController extends Controller
                     'location' => $request->location,
                     'apply_link' => $request->apply_link,
                     'content' => $md->text($request->input('content')),
-                    // 'is_highlighted' => $request->filled('is_highlighted'),
+                    'is_highlighted' => $request->filled('is_highlighted'),
                     'is_active' => true
                 ]);
 
