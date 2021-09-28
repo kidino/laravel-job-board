@@ -73,7 +73,7 @@ class ListingController extends Controller
         $validationArray = [
             'title' => 'required',
             'company' => 'required',
-            'logo' => 'required|file|max:2048',
+            'logo' => 'required|file|max:1024',
             'location' => 'required',
             'apply_link' => 'required|url',
             'content' => 'required',
