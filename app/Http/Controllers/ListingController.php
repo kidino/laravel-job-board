@@ -112,7 +112,9 @@ class ListingController extends Controller
                 $amount += 500; // plus RM5 for highlight
             }
 
-            $user->charge($amount, $request->payment_method_id);
+            $user->charge($amount, $request->payment_method_id, [
+                "description" => "JOMWEB job ad" . (($request->filled('is_highlighted')) ? ' with highlight' : '')
+            ]);
 
             $md = new \ParsedownExtra();
 
