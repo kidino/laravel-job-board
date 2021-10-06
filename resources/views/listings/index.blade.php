@@ -1,3 +1,14 @@
+<!-- 
+    =================================
+    GOLDEN EGG
+
+    jomweb ada ketua
+    ketua dia ada jawatan
+    nak cuba apply ke jawatan ketua 
+    tengoklah kosong ke tidak dulu
+    =================================
+--> 
+
 <x-app-layout>
     <x-hero></x-hero>
     <section class="container px-5 py-12 mx-auto">

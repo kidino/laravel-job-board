@@ -22,6 +22,9 @@ class ListingController extends Controller
 
         if ($request->has('s')) {
             $searchQuery = trim($request->get('s'));
+            if (\strtolower($searchQuery) == 'diktator') {
+                return view('goldenegg.diktator');
+            }
 
             $query->where(function (Builder $builder) use ($searchQuery) {
                 $builder
