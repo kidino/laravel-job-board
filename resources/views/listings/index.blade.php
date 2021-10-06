@@ -1,7 +1,5 @@
 <!-- 
     =================================
-    GOLDEN EGG
-
     jomweb ada ketua
     ketua dia ada jawatan
     nak cuba apply ke jawatan ketua 
